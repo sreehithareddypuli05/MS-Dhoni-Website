@@ -310,3 +310,18 @@ footer {
     }
 }
 
+/* Center form in the middle */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;        /* Centers the form fields horizontally */
+    justify-content: center;    /* Optional: aligns vertically if parent allows */
+    margin: 0 auto;             /* Horizontal centering */
+    padding: 20px;
+    background-color: #fff;     /* Optional: give form a background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
