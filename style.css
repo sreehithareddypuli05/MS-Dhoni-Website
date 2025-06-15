@@ -315,13 +315,30 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    align-items: center;        /* Centers the form fields horizontally */
-    justify-content: center;    /* Optional: aligns vertically if parent allows */
-    margin: 0 auto;             /* Horizontal centering */
+    align-items: stretch; /* Allows input elements to fill the container width */
+    justify-content: center;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #fff;     /* Optional: give form a background */
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     width: 100%;
     max-width: 500px;
+    box-sizing: border-box;
 }
+@media (max-width: 480px) {
+    form {
+        padding: 15px;
+    }
+
+    form input,
+    form textarea,
+    form select,
+    form button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}input, textarea, button {
+    min-height: 44px; /* Good for mobile accessibility */
+}
+
